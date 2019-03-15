@@ -7,20 +7,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class HelperServiceTest {
 
     @Test
-    void initials() {
-        {
-            HelperService service = new HelperService();
-            String actual = service.initials("Vasiliy Petrov");
-            String expected = "VP";
+    void initialsForTwoWords() {
+        HelperService service = new HelperService();
+        String actual = service.initials("Vasiliy Petrov");
+        String expected = "VP";
+        assertEquals(expected, actual);
+    }
 
-            assertEquals(expected,actual);
-        }
-        {
-            HelperService service = new HelperService();
-            String actual = service.initials("Vasiliy");
-            String expected = "V";
-
-            assertEquals(expected,actual);
-        }
+    @Test
+    void initialsForOneWord() {
+        HelperService service = new HelperService();
+        String actual = service.initials("Vasiliy");
+        String expected = "V";
+        assertEquals(expected,actual);
     }
 }
