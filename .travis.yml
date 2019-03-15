@@ -7,7 +7,7 @@ script:
 notifications:
   email:
     recipients:
-      -ilya.tfb@yandex.ru
+      - ilya.tfb@yandex.ru
     on_failure: always
     on_success: change
 
